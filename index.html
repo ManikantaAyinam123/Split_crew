@@ -1,38 +1,115 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Split_crew</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <style>
-    @keyframes logoBounce {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-13px);
-      }
+    /* Page reset & base */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; font-family: Arial, Helvetica, sans-serif; background: #f8fafc; color: #222; }
+
+    /* Container (centered column) */
+    .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 40px 16px;
     }
 
+    /* Card */
+    .card {
+      width: 100%;
+      max-width: 640px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 24px;
+      box-shadow: 0 8px 20px rgba(16,24,40,0.08);
+      border: 2px solid rgba(13,110,253,0.12); /* info-like border */
+    }
+
+    /* Heading */
+    .card h5 {
+      text-align: center;
+      color: #a33354; /* your color */
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    /* Image wrapper / responsive image */
+    .logo-wrap {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    .logo {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+      object-fit: contain;
+      max-height: 230px; /* match original height limit */
+    }
+
+    /* Text paragraph */
+    .lead-text {
+      text-align: center;
+      font-size: 0.98rem;
+      line-height: 1.4;
+      margin-top: 8px;
+    }
+    .lead-text .app-name {
+      color: #d6333f; /* text-danger equivalent */
+      font-weight: 700;
+    }
+    .privacy-link {
+  display: flex;           /* make it a flex container */
+  justify-content: center; /* center horizontally */
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+
+    .privacy-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Bouncing animation */
+    @keyframes logoBounce {
+      0%, 100% { transform: translateY(0); }
+      50%     { transform: translateY(-13px); }
+    }
     .bouncing-logo {
       animation: logoBounce 4s infinite;
+      will-change: transform;
+    }
+
+    /* Small-screen tweaks */
+    @media (max-width: 420px) {
+      .card { padding: 16px; border-radius: 8px; }
+      .card h5 { font-size: 1rem; }
+      .logo { max-height: 180px; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="card col-md-6 mx-auto mt-5 shadow border border-info p-4">
-      <h5 class="text-center" style="color: #a33354;">Welcome to Split Crew App!</h5>
-      <div class="text-center">
-        <!-- Replace with your actual image path -->
-        <img src="/assets/images/Splitcrew_logo.png" alt="YOYO Wash Logo" class="img-fluid mb-4 bouncing-logo" style="height: 230px;">
-        
-        <p class="mb-0">
-          This app is now available on the Play Store! Just search for 
-          '<strong class="text-danger">Split Crew</strong>' to download and start using it today.
-        </p>
+    <div class="card">
+      <h5>Welcome to Split Crew App!</h5>
+
+      <div class="logo-wrap">
+        <!-- Replace the src with your actual image path -->
+        <img src="/assets/images/Splitcrew_logo.png" alt="Split Crew Logo" class="logo bouncing-logo">
       </div>
+
+      <p class="lead-text">
+        This app is now available on the Play Store! Just search for
+        <strong class="app-name">Split Crew</strong> to download and start using it today.
+      </p>
+
+           <!-- Privacy link -->
+           <a href="/privacy" class="privacy-link">Privacy Policy</a>
     </div>
   </div>
 </body>
