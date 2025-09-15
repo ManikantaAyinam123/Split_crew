@@ -109,6 +109,9 @@
 
 <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    if (location.pathname.endsWith('/')) {
+    window.location.replace(location.pathname.slice(0, -1) + location.search + location.hash);
+  }
 </script>
 
 </body>
