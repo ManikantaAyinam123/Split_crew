@@ -1,118 +1,396 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+ 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Split Crew</title>
-   <!-- Favicon -->
-   <link rel="icon" type="image/png" href="/assets/images/Splitcrew_logo.png" />
-  <style>
-    /* Page reset & base */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; font-family: Arial, Helvetica, sans-serif; background: #f8fafc; color: #222; }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Split Crew – Welcome</title>
+<link rel="icon" href="/assets/images/Splitcrew_logo.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+<style>
 
-    /* Container (centered column) */
-    .container {
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      padding: 40px 16px;
-    }
+        html,
 
-    /* Card */
-    .card {
-      width: 100%;
-      max-width: 640px;
-      background: #fff;
-      border-radius: 10px;
-      padding: 24px;
-      box-shadow: 0 8px 20px rgba(16,24,40,0.08);
-      border: 2px solid rgba(13,110,253,0.12); /* info-like border */
-    }
+        body {
 
-    /* Heading */
-    .card h5 {
-      text-align: center;
-      color: #a33354; /* your color */
-      margin-bottom: 20px;
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
+            margin: 0;
 
-    /* Image wrapper / responsive image */
-    .logo-wrap {
-      text-align: center;
-      margin-bottom: 18px;
-    }
-    .logo {
-      max-width: 100%;
-      height: auto;
-      display: inline-block;
-      object-fit: contain;
-      max-height: 230px; /* match original height limit */
-    }
+            padding: 0;
 
-    /* Text paragraph */
-    .lead-text {
-      text-align: center;
-      font-size: 0.98rem;
-      line-height: 1.4;
-      margin-top: 8px;
-    }
-    .lead-text .app-name {
-      color: #d6333f; /* text-danger equivalent */
-      font-weight: 700;
-    }
-    .privacy-link {
-  display: flex;           /* make it a flex container */
-  justify-content: center; /* center horizontally */
-  margin-top: 20px;
-  font-size: 0.9rem;
-  color: #0d6efd;
-  text-decoration: none;
-}
+            font-family: 'Poppins', sans-serif;
 
+            /* Only hide horizontal scroll, NOT vertical */
 
-    .privacy-link:hover {
-      text-decoration: underline;
-    }
+            overflow-x: hidden;
 
-    /* Bouncing animation */
-    @keyframes logoBounce {
-      0%, 100% { transform: translateY(0); }
-      50%     { transform: translateY(-13px); }
-    }
-    .bouncing-logo {
-      animation: logoBounce 4s infinite;
-      will-change: transform;
-    }
+            background:
 
-    /* Small-screen tweaks */
-    @media (max-width: 420px) {
-      .card { padding: 16px; border-radius: 8px; }
-      .card h5 { font-size: 1rem; }
-      .logo { max-height: 180px; }
-    }
-  </style>
+                radial-gradient(circle at 75% 18%, #f3d9fc 14%, transparent 47%),
+
+                radial-gradient(circle at 15% 90%, #e8e2fa 17%, transparent 67%),
+
+                linear-gradient(120deg, #d6e8fa 0%, #d8e5e2 49%, #9f21e3 142%);
+ 
+            position: relative;
+
+            min-height: 100vh;
+
+            width: 100%;
+
+        }
+ 
+        body {
+
+            min-height: 100vh;
+
+            width: 100%;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: stretch;
+
+            justify-content: flex-start;
+
+            /* Enable vertical scroll for overflow */
+
+            overflow-y: auto;
+
+        }
+ 
+        .blurred-circle {
+
+            position: fixed;
+
+            border-radius: 50%;
+
+            filter: blur(42px);
+
+            z-index: 0;
+
+            pointer-events: none;
+
+        }
+ 
+        .blurred1 {
+
+            width: 320px;
+
+            height: 320px;
+
+            background: #fbc2eb;
+
+            top: 10%;
+
+            left: 60%;
+
+            opacity: 0.22;
+
+        }
+ 
+        .blurred2 {
+
+            width: 220px;
+
+            height: 180px;
+
+            background: #fed6e3;
+
+            bottom: 7%;
+
+            left: 12%;
+
+            opacity: 0.18;
+
+        }
+ 
+        .center-content {
+
+            z-index: 1;
+
+            position: relative;
+
+            width: 100%;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 1.2rem 0.7rem 2.7rem 0.7rem;
+
+            /* extra bottom padding for scroll on small screens */
+
+        }
+ 
+        .logo {
+
+            width: 144px;
+
+            height: 144px;
+
+            margin-bottom: 42px;
+
+            border-radius: 28px;
+
+            background: rgba(221, 220, 243, 0.22);
+
+            backdrop-filter: blur(3px);
+
+            display: block;
+
+            animation: float 3s ease-in-out infinite;
+
+            box-shadow: 0 16px 54px rgba(163, 51, 84, 0.13);
+
+        }
+ 
+        h1 {
+
+            font-size: 2.8rem;
+
+            font-weight: 700;
+
+            color: #9F21E3;
+
+            margin-bottom: 15px;
+
+            letter-spacing: -1px;
+
+            //text-shadow: 0 4px 36px rgba(20, 16, 31, 0.11);
+
+            text-align: center;
+
+        }
+ 
+        p {
+
+            font-size: 1.2rem;
+
+            font-weight: 500;
+
+            color: #30202b;
+
+            margin-bottom: 32px;
+
+            max-width: 520px;
+
+            text-align: center;
+
+            text-shadow: 0 2px 14px rgba(163, 51, 84, 0.09);
+
+            background: rgba(255, 255, 255, 0.39);
+
+            border-radius: 1em;
+
+            padding: 0.5em 1.25em;
+
+            display: inline-block;
+
+        }
+ 
+        .google-play-btn {
+
+            margin-bottom: 36px;
+
+            transition: transform .19s;
+
+            display: inline-block;
+
+            border-radius: 13px;
+
+            box-shadow: 0 6px 28px rgba(163, 51, 84, 0.17);
+
+            background: #faf7fc;
+
+            padding: 0.2em;
+
+        }
+ 
+        .google-play-btn:focus,
+
+        .google-play-btn:hover {
+
+            transform: scale(1.07);
+
+            background: #fff0fa;
+
+        }
+ 
+        .features {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 24px;
+
+            margin-bottom: 38px;
+
+        }
+ 
+        .feature {
+
+            background: rgba(255, 255, 255, 0.54);
+
+            border-radius: 18px;
+
+            padding: 16px 28px;
+
+            font-size: 1.08rem;
+
+            color: #9f21e3;
+
+            font-weight: 500;
+
+            text-align: center;
+
+            box-shadow: 0 4px 24px rgba(163, 51, 84, 0.05);
+
+        }
+ 
+        .privacy-link {
+
+            color: #9F21E3;
+
+            text-decoration: underline dashed;
+
+            opacity: 0.99;
+
+            font-size: 1.02rem;
+
+            letter-spacing: 0.03em;
+
+            margin-top: 1em;
+
+            transition: color 0.2s;
+
+        }
+ 
+        .privacy-link:hover {
+
+            color: #9F21E3;
+
+            text-decoration: underline solid;
+
+        }
+ 
+        @keyframes float {
+ 
+            0%,
+
+            100% {
+
+                transform: translateY(0);
+
+            }
+ 
+            50% {
+
+                transform: translateY(-18px);
+
+            }
+
+        }
+ 
+        /* Responsive Styles */
+
+        @media (max-width: 600px) {
+ 
+            body,
+
+            html {
+
+                min-height: 100vh;
+
+                height: auto;
+
+                width: 100%;
+
+                /* Allow scroll */
+
+                overflow-y: auto;
+
+                overflow-x: hidden;
+
+            }
+ 
+            .logo {
+
+                width: 80px;
+
+                height: 80px;
+
+                margin-bottom: 28px;
+
+            }
+ 
+            h1 {
+
+                font-size: 1.55rem;
+
+            }
+ 
+            .feature {
+
+                font-size: 0.98rem;
+
+                padding: 10px 12px;
+
+            }
+ 
+            .center-content {
+
+                min-height: 100vh;
+
+                padding: 1.2rem 0.3rem 2.7rem 0.3rem;
+
+            }
+ 
+            p {
+
+                font-size: 1rem;
+
+                padding: 0.5em 0.5em;
+
+            }
+
+        }
+</style>
 </head>
+ 
 <body>
-  <div class="container">
-    <div class="card">
-      <h5>Welcome to Split Crew App!</h5>
+<div class="blurred-circle blurred1"></div>
+<div class="blurred-circle blurred2"></div>
+<div class="center-content">
+<img src="/assets/images/Splitcrew_logo.png" alt="Split Crew Logo" class="logo">
+<h1>Welcome to Split Crew</h1>
+<p>
 
-      <div class="logo-wrap">
-        <!-- Replace the src with your actual image path -->
-        <img src="/assets/images/Splitcrew_logo.png" alt="Split Crew Logo" class="logo bouncing-logo">
-      </div>
+            Effortless group expense sharing starts here.<br>
 
-      <p class="lead-text">
-        This app is now available on the Play Store! Just search for
-        <strong class="app-name">Split Crew</strong> to download and start using it today.
-      </p>
-
-           <!-- Privacy link -->
-           <a href="/privacy" class="privacy-link">Privacy Policy</a>
-    </div>
-  </div>
+            Invite friends, split costs instantly, and keep finances transparent.
+</p>
+<a href="https://play.google.com/store/apps/details?id=your.app.id" class="google-play-btn" target="_blank" rel="noopener">
+<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="210" height="66" style="display:block; width:210px; height:66px; border-radius:13px;">
+</a>
+<div class="features">
+<span class="feature">✔ One-tap group creation</span>
+<span class="feature">✔ Real-time bill splitting</span>
+<span class="feature">✔ Instant reminders</span>
+<span class="feature">✔ Export reports</span>
+</div>
+<a href="/privacy" class="privacy-link">Privacy Policy</a>
+</div>
 </body>
+ 
 </html>
+ 
