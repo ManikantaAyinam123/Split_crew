@@ -6,363 +6,451 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Split Crew – Welcome</title>
 <link rel="icon" href="/assets/images/Splitcrew_logo.png" type="image/png">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+<!--<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 <style>
-
         html,
-
+ 
         body {
-
+ 
             margin: 0;
-
+ 
             padding: 0;
-
-            font-family: 'Poppins', sans-serif;
-
+ 
+            font-family: 'Quicksand', sans-serif;
+ 
             /* Only hide horizontal scroll, NOT vertical */
-
+ 
             overflow-x: hidden;
-
+ 
             background:
-
+ 
                 radial-gradient(circle at 75% 18%, #f3d9fc 14%, transparent 47%),
-
+ 
                 radial-gradient(circle at 15% 90%, #e8e2fa 17%, transparent 67%),
-
+ 
                 linear-gradient(120deg, #d6e8fa 0%, #d8e5e2 49%, #9f21e3 142%);
  
             position: relative;
-
+ 
             min-height: 100vh;
-
+ 
             width: 100%;
-
+ 
         }
  
         body {
-
+ 
             min-height: 100vh;
-
+ 
             width: 100%;
-
+ 
             display: flex;
-
+ 
             flex-direction: column;
-
+ 
             align-items: stretch;
-
+ 
             justify-content: flex-start;
-
+ 
             /* Enable vertical scroll for overflow */
-
+ 
             overflow-y: auto;
-
+ 
         }
  
         .blurred-circle {
-
+ 
             position: fixed;
-
+ 
             border-radius: 50%;
-
+ 
             filter: blur(42px);
-
+ 
             z-index: 0;
-
+ 
             pointer-events: none;
-
+ 
         }
  
         .blurred1 {
-
+ 
             width: 320px;
-
+ 
             height: 320px;
-
+ 
             background: #fbc2eb;
-
+ 
             top: 10%;
-
+ 
             left: 60%;
-
+ 
             opacity: 0.22;
-
+ 
         }
  
         .blurred2 {
-
+ 
             width: 220px;
-
+ 
             height: 180px;
-
+ 
             background: #fed6e3;
-
+ 
             bottom: 7%;
-
+ 
             left: 12%;
-
+ 
             opacity: 0.18;
-
+ 
         }
  
         .center-content {
-
+ 
             z-index: 1;
-
+ 
             position: relative;
-
+ 
             width: 100%;
-
+ 
             min-height: 100vh;
-
+ 
             display: flex;
-
+ 
             flex-direction: column;
-
+ 
             justify-content: center;
-
+ 
             align-items: center;
-
+ 
             padding: 1.2rem 0.7rem 2.7rem 0.7rem;
-
+ 
             /* extra bottom padding for scroll on small screens */
-
+ 
         }
  
         .logo {
-
+ 
             width: 144px;
-
+ 
             height: 144px;
-
+ 
             margin-bottom: 42px;
-
+ 
             border-radius: 28px;
-
+ 
             background: rgba(221, 220, 243, 0.22);
-
+ 
             backdrop-filter: blur(3px);
-
+ 
             display: block;
-
+ 
             animation: float 3s ease-in-out infinite;
-
+ 
             box-shadow: 0 16px 54px rgba(163, 51, 84, 0.13);
-
+ 
         }
  
         h1 {
-
+ 
             font-size: 2.8rem;
-
+ 
             font-weight: 700;
-
+ 
             color: #9F21E3;
-
+ 
             margin-bottom: 15px;
-
+ 
             letter-spacing: -1px;
-
+ 
             //text-shadow: 0 4px 36px rgba(20, 16, 31, 0.11);
-
+ 
             text-align: center;
-
+ 
         }
  
         p {
-
+ 
             font-size: 1.2rem;
-
+ 
             font-weight: 500;
-
+            line-height: 180%;
+ 
             color: #30202b;
-
+ 
             margin-bottom: 32px;
-
+ 
             max-width: 520px;
-
+ 
             text-align: center;
-
+ 
             text-shadow: 0 2px 14px rgba(163, 51, 84, 0.09);
-
+ 
             background: rgba(255, 255, 255, 0.39);
-
+ 
             border-radius: 1em;
-
+ 
             padding: 0.5em 1.25em;
-
+ 
             display: inline-block;
-
+ 
         }
  
         .google-play-btn {
-
+ 
             margin-bottom: 36px;
-
+ 
             transition: transform .19s;
-
+ 
             display: inline-block;
-
+ 
             border-radius: 13px;
-
+ 
             box-shadow: 0 6px 28px rgba(163, 51, 84, 0.17);
-
+ 
             background: #faf7fc;
-
+ 
             padding: 0.2em;
-
+ 
         }
  
         .google-play-btn:focus,
-
+ 
         .google-play-btn:hover {
-
+ 
             transform: scale(1.07);
-
+ 
             background: #fff0fa;
-
+ 
         }
  
         .features {
-
+ 
             display: flex;
-
+ 
             flex-wrap: wrap;
-
+ 
             justify-content: center;
-
+ 
             gap: 24px;
-
-            margin-bottom: 38px;
-
+ 
+ 
         }
  
         .feature {
-
+ 
             background: rgba(255, 255, 255, 0.54);
-
+ 
             border-radius: 18px;
-
+ 
             padding: 16px 28px;
-
+ 
             font-size: 1.08rem;
-
+ 
             color: #9f21e3;
-
+ 
             font-weight: 500;
-
+ 
             text-align: center;
-
+ 
             box-shadow: 0 4px 24px rgba(163, 51, 84, 0.05);
-
+ 
         }
  
         .privacy-link {
-
+ 
             color: #9F21E3;
-
+ 
             text-decoration: underline dashed;
-
+ 
             opacity: 0.99;
-
+ 
             font-size: 1.02rem;
-
+ 
             letter-spacing: 0.03em;
-
+ 
             margin-top: 1em;
-
+ 
             transition: color 0.2s;
-
+ 
         }
  
         .privacy-link:hover {
-
+ 
             color: #9F21E3;
-
+ 
             text-decoration: underline solid;
-
+ 
         }
+ 
+        .site-footer {
+            position: relative;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.44);
+            backdrop-filter: blur(8px);
+            
+            padding: 18px 20px;
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            overflow: hidden;
+        }
+ 
+        .footer-content {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.96rem;
+            color: #30202b;
+        }
+ 
+        .privacy-link-footer {
+            color: #9F21E3;
+           
+            font-weight: 500;
+        }
+ 
+        .privacy-link-footer:hover {
+            
+            font-weight: 700;
+        }
+ 
+        .company-logo {
+            height: 20px;
+            vertical-align: middle;
+            margin: 0 6px;
+            border-radius: 4px;
+        }
+ 
+        .footer-blur {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(42px);
+            z-index: 0;
+            pointer-events: none;
+        }
+ 
+        .footer-blur.blur1 {
+            width: 220px;
+            height: 220px;
+            background: #fbc2eb;
+            top: -40px;
+            left: 10%;
+            opacity: 0.22;
+        }
+ 
+        .footer-blur.blur2 {
+            width: 180px;
+            height: 180px;
+            background: #fed6e3;
+            bottom: -40px;
+            right: 12%;
+            opacity: 0.18;
+        }
+ 
+        @media (max-width: 700px) {
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+ 
+            .by-company {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+            }
+        }
+ 
  
         @keyframes float {
  
             0%,
-
+ 
             100% {
-
+ 
                 transform: translateY(0);
-
+ 
             }
  
             50% {
-
+ 
                 transform: translateY(-18px);
-
+ 
             }
-
+ 
         }
  
         /* Responsive Styles */
-
+ 
         @media (max-width: 600px) {
  
             body,
-
+ 
             html {
-
+ 
                 min-height: 100vh;
-
+ 
                 height: auto;
-
+ 
                 width: 100%;
-
+ 
                 /* Allow scroll */
-
+ 
                 overflow-y: auto;
-
+ 
                 overflow-x: hidden;
-
+ 
             }
  
             .logo {
-
+ 
                 width: 80px;
-
+ 
                 height: 80px;
-
+ 
                 margin-bottom: 28px;
-
+ 
             }
  
             h1 {
-
+ 
                 font-size: 1.55rem;
-
+ 
             }
  
             .feature {
-
+ 
                 font-size: 0.98rem;
-
+ 
                 padding: 10px 12px;
-
+ 
             }
  
             .center-content {
-
+ 
                 min-height: 100vh;
-
+ 
                 padding: 1.2rem 0.3rem 2.7rem 0.3rem;
-
+ 
             }
  
             p {
-
+ 
                 font-size: 1rem;
-
+ 
                 padding: 0.5em 0.5em;
 
+ 
             }
-
+ 
         }
 </style>
 </head>
@@ -374,9 +462,9 @@
 <img src="/assets/images/Splitcrew_logo.png" alt="Split Crew Logo" class="logo">
 <h1>Welcome to Split Crew</h1>
 <p>
-
+ 
             Effortless group expense sharing starts here.<br>
-
+ 
             Invite friends, split costs instantly, and keep finances transparent.
 </p>
 <a href="https://play.google.com/store/apps/details?id=your.app.id" class="google-play-btn" target="_blank" rel="noopener">
@@ -386,11 +474,25 @@
 <span class="feature">✔ One-tap group creation</span>
 <span class="feature">✔ Real-time bill splitting</span>
 <span class="feature">✔ Instant reminders</span>
-<span class="feature">✔ Export reports</span>
+<span class="feature">✔ Export/share receipts</span>
 </div>
-<a href="/privacy" class="privacy-link">Privacy Policy</a>
 </div>
+<footer class="site-footer">
+<div class="footer-blur blur1"></div>
+<div class="footer-blur blur2"></div>
+<div class="footer-content">
+<a href="/privacy" class="privacy-link-footer">Privacy Policy</a>
+<span class="copyright">© 2025 SplitCrew. All rights reserved.</span>
+<span class="by-company">
+  by 
+  <a href="https://actimize.in" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+    <img src="/assets/images/actimizelogo.png" alt="Actimize Logo" class="company-logo">
+    Actimize Software Solutions
+  </a>
+</span>
+</div>
+</footer>
+ 
 </body>
  
 </html>
- 
